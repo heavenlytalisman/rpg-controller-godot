@@ -1,6 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://culnu3igfn2bg"]
+[gd_scene load_steps=14 format=3 uid="uid://culnu3igfn2bg"]
 
 [ext_resource type="Texture2D" uid="uid://cwitoxi86fhm6" path="res://Player/Sprites/ExamplePlayerSprite.png" id="1_jc21b"]
+[ext_resource type="Script" path="res://Player/Scripts/player_state_machine.gd" id="2_icde5"]
+[ext_resource type="Script" path="res://Player/Scripts/state_idle.gd" id="3_qjtq6"]
+[ext_resource type="Script" path="res://Player/Scripts/state_walk.gd" id="4_g35uk"]
 
 [sub_resource type="Animation" id="Animation_8crox"]
 length = 0.001
@@ -148,3 +151,12 @@ shape = SubResource("CircleShape2D_jes56")
 position = Vector2(0, -19)
 texture = ExtResource("1_jc21b")
 hframes = 21
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_icde5")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_qjtq6")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("4_g35uk")
