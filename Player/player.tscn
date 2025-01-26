@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://culnu3igfn2bg"]
 
-[ext_resource type="Texture2D" uid="uid://cwitoxi86fhm6" path="res://Player/Sprites/ExamplePlayerSprite.png" id="1_jc21b"]
+[ext_resource type="Texture2D" uid="uid://0ak7p5048hwe" path="res://Player/Sprites/PlayerSprite02.png" id="1_jfe6e"]
 [ext_resource type="Script" path="res://Player/Scripts/player_state_machine.gd" id="2_icde5"]
 [ext_resource type="Script" path="res://Player/Scripts/state_idle.gd" id="3_qjtq6"]
 [ext_resource type="Script" path="res://Player/Scripts/state_walk.gd" id="4_g35uk"]
@@ -31,10 +31,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 2]
 }
 
 [sub_resource type="Animation" id="Animation_m0mux"]
@@ -48,10 +48,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [14, 15, 16]
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6, 8]
 }
 
 [sub_resource type="Animation" id="Animation_6e1x5"]
@@ -65,10 +65,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [7, 8, 9]
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3, 5]
 }
 
 [sub_resource type="Animation" id="Animation_wtrp8"]
@@ -82,10 +82,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [3, 4, 5, 6]
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [9, 12]
 }
 
 [sub_resource type="Animation" id="Animation_q5nrh"]
@@ -99,10 +99,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [17, 18, 19, 20]
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [17, 20]
 }
 
 [sub_resource type="Animation" id="Animation_emhrv"]
@@ -116,10 +116,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [10, 11, 12, 13]
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [13, 16]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rnrd0"]
@@ -152,8 +152,9 @@ shape = SubResource("CircleShape2D_jes56")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -19)
-texture = ExtResource("1_jc21b")
-hframes = 21
+texture = ExtResource("1_jfe6e")
+hframes = 16
+vframes = 3
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("2_icde5")
